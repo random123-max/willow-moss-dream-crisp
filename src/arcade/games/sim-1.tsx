@@ -335,7 +335,8 @@ export function EspressoTycoon() {
       <Stat label="Queue" value={queue.length} />
       <Btn onClick={restock} disabled={money < 10} variant="ghost" className="w-full">📦 Restock (10)</Btn>
       <Msg>{over ? "💀 Burnout!" : log}</Msg>
-    </}>      <div className="flex flex-col items-center gap-4">
+    </>}>
+      <div className="flex flex-col items-center gap-4">
         {serving !== null && (
           <div className="w-full max-w-sm rounded-lg border border-line bg-surface p-3">
             <p className="text-center text-sm text-muted">Making {DRINKS[serving].name}…</p>
