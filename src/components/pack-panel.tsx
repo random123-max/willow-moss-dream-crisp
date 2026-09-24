@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Check, Copy, Download, Gamepad2, Lock, Package } from "lucide-react";
-import {
-  ARCADE,
-  EDU_MODULES,
-  FEATURED,
-  GIFT_CODE,
-  SEALED_TOTAL,
-} from "@/lib/catalog";
+import { Check, Copy, Download, Gamepad2, Package } from "lucide-react";
+import { EDU_MODULES, FEATURED, GIFT_CODE } from "@/lib/catalog";
+import { GAMES } from "@/arcade/registry";
 
 function CopyField({ label, value }: { label: string; value: string }) {
   const [copied, setCopied] = useState(false);
@@ -133,35 +128,26 @@ export function PackPanel({ playHref }: { playHref: string }) {
           </Link>
         </div>
         <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {ARCADE.map((g) =>
-            g.status === "live" && g.href ? (
-              <Link
-                key={g.id}
-                to="/play"
-                className="rounded-lg border border-primary/40 bg-elevated p-4"
-              >
-                <p className="text-xs uppercase tracking-[0.14em] text-primary">Live</p>
-                <h3 className="mt-2 font-display text-base text-fg">{g.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted">{g.tag}</p>
-              </Link>
-            ) : (
-              <div
-                key={g.id}
-                className="rounded-lg border border-line bg-surface p-4 opacity-70"
-              >
-                <p className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.14em] text-muted">
-                  <Lock className="size-3" />
-                  Sealed
-                </p>
-                <h3 className="mt-2 font-display text-base text-fg">{g.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted">{g.blurb}</p>
+          {GAMES.slice(0, 8).map((g) => (
+            <Link
+              key={g.id}
+              to="/arcade/$gameId"
+              params={{ gameId: g.id }}
+              className="group rounded-lg border border-primary/40 bg-elevated p-4 transition-colors hover:bg-surface"
+            >
+              <div className="flex items-start justify-between">
+                <span className="text-2xl">{g.icon}</span>
+                <span className="font-mono text-xs text-muted">{g.num}</span>
               </div>
-            ),
-          )}
+              <h3 className="mt-2 font-display text-base leading-tight text-fg group-hover:text-primary">
+                {g.title}
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted">{g.tagline}</p>
+            </Link>
+          ))}
         </div>
         <p className="mt-4 text-xs text-muted">
-          Vault capacity 250. Remaining sealed slots are held for tic-tac-toe, rock paper scissors,
-          and the rest of the bundle.
+          50 games across four halls — enter the vault to browse them all.
         </p>
       </section>
     </div>
