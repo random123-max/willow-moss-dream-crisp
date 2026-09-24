@@ -349,3 +349,9 @@ auth/db: OFF by default — sign-in, @/lib/db or migrations ONLY on an accounts 
 never:   build an app for a greeting/number/question; invent imagine_* calls;
          ask the user to run commands; delete or abandon /workspace/startup.sh
 ```
+
+## Base44 imported development environment
+
+- In Base44, run `docker compose -f docker-compose.base44.yml up -d --build`; its source-mounted Node 22 service exposes the Vite development server on host port 3000. The older `/workspace/startup.sh` and port 8080 directions above describe the original Grok workspace, not Base44's entry point.
+- `.grok/app-env.json` disables auth; the current `/` and `/play` routes need neither a database nor third-party credentials. Do not set `DATABASE_URL` while `VITE_AUTH_ENABLED=false` (the auth verifier rejects that combination).
+- Verify the server with `curl http://127.0.0.1:3000/` and inspect `docker compose -f docker-compose.base44.yml logs web` for live Vite compilation; edits under `src/` are bind-mounted and hot-reloaded.
