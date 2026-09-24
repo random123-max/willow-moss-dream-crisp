@@ -1,0 +1,13 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "helios:smelt_star_ore"
+    },
+    "tags": [
+      "furnace"
+    ],
+    "input": "helios:star_ore",
+    "output": "helios:star_crystal"
+  }
+}

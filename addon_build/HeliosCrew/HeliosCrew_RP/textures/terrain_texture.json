@@ -1,0 +1,149 @@
+{
+  "resource_pack_name": "helios_crew",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "dirt": {
+      "textures": "textures/blocks/dirt"
+    },
+    "grass_side": {
+      "textures": "textures/blocks/grass_side"
+    },
+    "grass_top": {
+      "textures": "textures/blocks/grass_top"
+    },
+    "stone": {
+      "textures": "textures/blocks/stone"
+    },
+    "cobblestone": {
+      "textures": "textures/blocks/cobblestone"
+    },
+    "sand": {
+      "textures": "textures/blocks/sand"
+    },
+    "gravel": {
+      "textures": "textures/blocks/gravel"
+    },
+    "obsidian": {
+      "textures": "textures/blocks/obsidian"
+    },
+    "iron_ore": {
+      "textures": "textures/blocks/iron_ore"
+    },
+    "gold_ore": {
+      "textures": "textures/blocks/gold_ore"
+    },
+    "diamond_ore": {
+      "textures": "textures/blocks/diamond_ore"
+    },
+    "coal_ore": {
+      "textures": "textures/blocks/coal_ore"
+    },
+    "log_oak": {
+      "textures": "textures/blocks/log_oak"
+    },
+    "log_top": {
+      "textures": "textures/blocks/log_top"
+    },
+    "leaves_oak": {
+      "textures": "textures/blocks/leaves_oak"
+    },
+    "planks": {
+      "textures": "textures/blocks/planks"
+    },
+    "wool_colored_white": {
+      "textures": "textures/blocks/wool_colored_white"
+    },
+    "glass": {
+      "textures": "textures/blocks/glass"
+    },
+    "glowstone": {
+      "textures": "textures/blocks/glowstone"
+    },
+    "netherrack": {
+      "textures": "textures/blocks/netherrack"
+    },
+    "end_stone": {
+      "textures": "textures/blocks/end_stone"
+    },
+    "ice": {
+      "textures": "textures/blocks/ice"
+    },
+    "snow": {
+      "textures": "textures/blocks/snow"
+    },
+    "bedrock": {
+      "textures": "textures/blocks/bedrock"
+    },
+    "metal": {
+      "textures": "textures/blocks/metal"
+    },
+    "roof": {
+      "textures": "textures/blocks/roof"
+    },
+    "crystal": {
+      "textures": "textures/blocks/crystal"
+    },
+    "bricks": {
+      "textures": "textures/blocks/bricks"
+    },
+    "crafting": {
+      "textures": "textures/blocks/crafting"
+    },
+    "lamp_side": {
+      "textures": "textures/blocks/lamp_side"
+    },
+    "planks_oak": {
+      "textures": "textures/blocks/planks_oak"
+    },
+    "helios_crust_top": {
+      "textures": "textures/blocks/helios_crust_top"
+    },
+    "helios_crust_side": {
+      "textures": "textures/blocks/helios_crust_side"
+    },
+    "helios_regolith": {
+      "textures": "textures/blocks/helios_regolith"
+    },
+    "helios_basalt": {
+      "textures": "textures/blocks/helios_basalt"
+    },
+    "helios_starwood_log": {
+      "textures": "textures/blocks/helios_starwood_log"
+    },
+    "helios_starwood_top": {
+      "textures": "textures/blocks/helios_starwood_top"
+    },
+    "helios_starwood_planks": {
+      "textures": "textures/blocks/helios_starwood_planks"
+    },
+    "helios_crystal_leaves": {
+      "textures": "textures/blocks/helios_crystal_leaves"
+    },
+    "helios_void_glass": {
+      "textures": "textures/blocks/helios_void_glass"
+    },
+    "helios_beacon_lamp": {
+      "textures": "textures/blocks/helios_beacon_lamp"
+    },
+    "helios_star_ore": {
+      "textures": "textures/blocks/helios_star_ore"
+    },
+    "helios_habitat_plate": {
+      "textures": "textures/blocks/helios_habitat_plate"
+    },
+    "helios_comms_tile": {
+      "textures": "textures/blocks/helios_comms_tile"
+    },
+    "helios_lunar_ice": {
+      "textures": "textures/blocks/helios_lunar_ice"
+    },
+    "helios_ejecta": {
+      "textures": "textures/blocks/helios_ejecta"
+    },
+    "helios_crystal_block": {
+      "textures": "textures/blocks/helios_crystal_block"
+    }
+  }
+}

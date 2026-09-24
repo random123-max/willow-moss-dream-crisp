@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "helios:comms_tile_craft"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PP",
+      "PP"
+    ],
+    "key": {
+      "P": {
+        "item": "helios:starwood_planks"
+      }
+    },
+    "result": {
+      "item": "helios:comms_tile",
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "helios:starwood_planks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "helios:starwood_log"
+      }
+    ],
+    "result": {
+      "item": "helios:starwood_planks",
+      "count": 4
+    }
+  }
+}

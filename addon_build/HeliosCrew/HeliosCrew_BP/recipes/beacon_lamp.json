@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "helios:beacon_lamp_craft"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " G ",
+      "GCG",
+      " G "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glowstone"
+      },
+      "C": {
+        "item": "helios:signal_core"
+      }
+    },
+    "result": {
+      "item": "helios:beacon_lamp",
+      "count": 4
+    }
+  }
+}

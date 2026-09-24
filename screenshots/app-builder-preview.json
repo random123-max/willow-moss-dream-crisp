@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": false,
+      "bodyTextLen": 169,
+      "bodyTextHash": "59f57453d0e17af4b689332752945eb74143c94031c5aa4220364582b40bc0d1",
+      "bodyTextPrefix": "FOR A SPACE LOVER A gift packed for Minecraft nights. Tap the bo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": false,
+      "bodyTextLen": 169,
+      "bodyTextHash": "59f57453d0e17af4b689332752945eb74143c94031c5aa4220364582b40bc0d1",
+      "bodyTextPrefix": "FOR A SPACE LOVER A gift packed for Minecraft nights. Tap the bo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

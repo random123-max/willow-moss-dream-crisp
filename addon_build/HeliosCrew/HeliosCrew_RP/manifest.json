@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Helios Crew Visuals",
+    "description": "Space resource pack for Minecraft Education \u2014 lunar crust, starwood, visor undead. Original art.",
+    "uuid": "9367231e-5b07-4bed-824a-efcf6dfdbfaa",
+    "version": [
+      1,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "18102146-174c-466f-9d99-97c6406433cd",
+      "version": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

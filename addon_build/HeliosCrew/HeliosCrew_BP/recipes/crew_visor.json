@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "helios:crew_visor_craft"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "III",
+      "G G"
+    ],
+    "key": {
+      "G": {
+        "item": "helios:void_glass"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "helios:crew_visor",
+      "count": 1
+    }
+  }
+}

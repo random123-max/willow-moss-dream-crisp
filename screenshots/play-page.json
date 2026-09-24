@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/play",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": true,
+      "bodyTextLen": 150,
+      "bodyTextHash": "d9b5414cad0c7140a5c4faf07174df55b867bfb3c88aab9f3b50232e67774ded",
+      "bodyTextPrefix": "Gift pack HELIOS OUTPOST Click the world to look around Crystals",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-page.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": true,
+      "bodyTextLen": 94,
+      "bodyTextHash": "adb0e7978e5f301c585ba47a5b0d965a3d4e679faf53695fd432e887e9d3941a",
+      "bodyTextPrefix": "Gift pack HELIOS OUTPOST Click the world to look around Crystals",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-page-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/play-page.json"
+}

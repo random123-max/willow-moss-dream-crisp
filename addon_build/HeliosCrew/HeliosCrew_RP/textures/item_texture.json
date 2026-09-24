@@ -1,0 +1,27 @@
+{
+  "resource_pack_name": "helios_crew",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "moon_rock": {
+      "textures": "textures/items/moon_rock"
+    },
+    "star_crystal": {
+      "textures": "textures/items/star_crystal"
+    },
+    "signal_core": {
+      "textures": "textures/items/signal_core"
+    },
+    "crew_visor": {
+      "textures": "textures/items/crew_visor"
+    },
+    "crew_ration": {
+      "textures": "textures/items/crew_ration"
+    },
+    "astro_compass": {
+      "textures": "textures/items/astro_compass"
+    },
+    "fuel_cell": {
+      "textures": "textures/items/fuel_cell"
+    }
+  }
+}

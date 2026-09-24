@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Helios Crew Systems",
+    "description": "Custom Helios blocks, gear, recipes, drops, and a starter kit function. Pair with Helios Crew Visuals.",
+    "uuid": "ae0aa3af-edae-4a78-8629-9a088269613e",
+    "version": [
+      1,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "c854bde7-7047-401c-b055-62935fc6fa99",
+      "version": [
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "9367231e-5b07-4bed-824a-efcf6dfdbfaa",
+      "version": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

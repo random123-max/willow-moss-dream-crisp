@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "helios:fuel_cell",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": "fuel_cell",
+      "minecraft:display_name": {
+        "value": "Fuel Cell"
+      }
+    }
+  }
+}

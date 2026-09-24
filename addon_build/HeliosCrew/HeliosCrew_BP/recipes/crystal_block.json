@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "helios:crystal_block_craft"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CC",
+      "CC"
+    ],
+    "key": {
+      "C": {
+        "item": "helios:star_crystal"
+      }
+    },
+    "result": {
+      "item": "helios:crystal_block",
+      "count": 1
+    }
+  }
+}

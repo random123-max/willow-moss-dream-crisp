@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/play",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Helios Crew",
+      "hasCanvas": true,
+      "bodyTextLen": 137,
+      "bodyTextHash": "4820fa69b4cb3d55209f5bc2a7d74850c76047d8151e096f6085fe03ba863a17",
+      "bodyTextPrefix": "Gift letter HELIOS OUTPOST Click to look Suit 8/8 · Crystals 0 ·",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Helios Crew",
+      "hasCanvas": true,
+      "bodyTextLen": 104,
+      "bodyTextHash": "7a238d69809894027d206b797e40254da1d25b97c9819f4d62e73df88a4d7f8c",
+      "bodyTextPrefix": "Gift letter HELIOS OUTPOST Click to lock look · mine the moon Su",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/play.json"
+}

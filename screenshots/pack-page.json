@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/?open=1",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": false,
+      "bodyTextLen": 2251,
+      "bodyTextHash": "3f512ff3201c8d27ded0d2b9681cacbfb33af9d310e50342495bed1b26f59dae",
+      "bodyTextPrefix": "OPENED Helios Gift Pack A space rewrite of their Minecraft night",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/pack-page.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Helios Gift Pack",
+      "hasCanvas": false,
+      "bodyTextLen": 2251,
+      "bodyTextHash": "3f512ff3201c8d27ded0d2b9681cacbfb33af9d310e50342495bed1b26f59dae",
+      "bodyTextPrefix": "OPENED Helios Gift Pack A space rewrite of their Minecraft night",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/pack-page-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/pack-page.json"
+}

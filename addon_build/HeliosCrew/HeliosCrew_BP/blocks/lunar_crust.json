@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "helios:lunar_crust",
+      "menu_category": {
+        "category": "construction"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.6
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:map_color": "#2F6F62",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "helios_crust_side",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "helios_crust_top",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "helios_regolith",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true
+    }
+  }
+}

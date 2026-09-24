@@ -1,0 +1,67 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "helios:lunar_crust": {
+    "textures": {
+      "up": "helios_crust_top",
+      "down": "helios_regolith",
+      "side": "helios_crust_side"
+    },
+    "sound": "stone"
+  },
+  "helios:regolith": {
+    "textures": "helios_regolith",
+    "sound": "gravel"
+  },
+  "helios:basalt": {
+    "textures": "helios_basalt",
+    "sound": "stone"
+  },
+  "helios:starwood_log": {
+    "textures": {
+      "up": "helios_starwood_top",
+      "down": "helios_starwood_top",
+      "side": "helios_starwood_log"
+    },
+    "sound": "stone"
+  },
+  "helios:starwood_planks": {
+    "textures": "helios_starwood_planks",
+    "sound": "stone"
+  },
+  "helios:crystal_leaves": {
+    "textures": "helios_crystal_leaves",
+    "sound": "grass"
+  },
+  "helios:void_glass": {
+    "textures": "helios_void_glass",
+    "sound": "glass"
+  },
+  "helios:beacon_lamp": {
+    "textures": "helios_beacon_lamp",
+    "sound": "stone"
+  },
+  "helios:star_ore": {
+    "textures": "helios_star_ore",
+    "sound": "stone"
+  },
+  "helios:habitat_plate": {
+    "textures": "helios_habitat_plate",
+    "sound": "stone"
+  },
+  "helios:comms_tile": {
+    "textures": "helios_comms_tile",
+    "sound": "stone"
+  },
+  "helios:lunar_ice": {
+    "textures": "helios_lunar_ice",
+    "sound": "stone"
+  },
+  "helios:crystal_block": {
+    "textures": "helios_crystal_block",
+    "sound": "stone"
+  }
+}
