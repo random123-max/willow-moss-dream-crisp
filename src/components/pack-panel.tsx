@@ -121,9 +121,16 @@ export function PackPanel({ playHref }: { playHref: string }) {
           <div>
             <h2 className="font-display text-xl text-fg">Arcade vault</h2>
             <p className="mt-1 text-sm text-muted">
-              Helios is live. {SEALED_TOTAL} more slots sit sealed for the small games you add later.
+              50 small games are live. Browse the full vault or jump in below.
             </p>
           </div>
+          <Link
+            to="/arcade"
+            className="inline-flex h-11 shrink-0 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-bg"
+          >
+            <Gamepad2 className="size-4" />
+            Enter vault
+          </Link>
         </div>
         <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
           {ARCADE.map((g) =>
