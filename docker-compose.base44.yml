@@ -1,0 +1,18 @@
+services:
+  app:
+    image: node:22
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports: ["3000:8080"]
+    environment:
+      - __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS
+      - CHOKIDAR_USEPOLLING=true
+    command: ["sh","-ec","npm ci && exec npm run dev"]
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL","curl -sf -o /dev/null --max-time 5 http://localhost:8080/ || (echo app down; exit 1)"]
+      interval: 15s
+      timeout: 8s
+      retries: 5
+      start_period: 120s
