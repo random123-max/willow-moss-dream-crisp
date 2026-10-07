@@ -1,6 +1,6 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { R as require_react, _ as Link, y as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { c as ArrowLeft } from "../_libs/lucide-react.mjs";
+import { p as ArrowLeft } from "../_libs/lucide-react.mjs";
 import { C as SphereGeometry, D as Vector3, E as TextureLoader, S as Scene, T as SpriteMaterial, _ as PerspectiveCamera, a as CanvasTexture, b as PointsMaterial, c as Float32BufferAttribute, d as LineBasicMaterial, f as LineSegments, g as NearestFilter, h as MeshLambertMaterial, i as BufferGeometry, l as FogExp2, m as MeshBasicMaterial, n as BoxGeometry, o as DirectionalLight, p as Mesh, r as BufferAttribute, s as EdgesGeometry, t as WebGLRenderer, u as HemisphereLight, v as PointLight, w as Sprite, x as SRGBColorSpace, y as Points } from "../_libs/three.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/play-Bcyv1APJ.js
 var import_react = /* @__PURE__ */ __toESM(require_react());

@@ -121,9 +121,17 @@ export function PackPanel({ playHref }: { playHref: string }) {
           <div>
             <h2 className="font-display text-xl text-fg">Arcade vault</h2>
             <p className="mt-1 text-sm text-muted">
-              Helios is live. {SEALED_TOTAL} more slots sit sealed for the small games you add later.
+              50 hand-crafted games with unique twists. Board games, arcade action, brain-melting
+              puzzles, and deep sims — each with a guided tour.
             </p>
           </div>
+          <Link
+            to="/arcade"
+            className="inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-bg"
+          >
+            <Gamepad2 className="size-4" />
+            Enter the Vault
+          </Link>
         </div>
         <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
           {ARCADE.map((g) =>
@@ -138,9 +146,10 @@ export function PackPanel({ playHref }: { playHref: string }) {
                 <p className="mt-1 text-xs leading-relaxed text-muted">{g.tag}</p>
               </Link>
             ) : (
-              <div
+              <Link
                 key={g.id}
-                className="rounded-lg border border-line bg-surface p-4 opacity-70"
+                to="/arcade"
+                className="rounded-lg border border-line bg-surface p-4 opacity-80 transition-all hover:border-primary/40 hover:bg-elevated"
               >
                 <p className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.14em] text-muted">
                   <Lock className="size-3" />
@@ -148,13 +157,12 @@ export function PackPanel({ playHref }: { playHref: string }) {
                 </p>
                 <h3 className="mt-2 font-display text-base text-fg">{g.title}</h3>
                 <p className="mt-1 text-xs leading-relaxed text-muted">{g.blurb}</p>
-              </div>
+              </Link>
             ),
           )}
         </div>
         <p className="mt-4 text-xs text-muted">
-          Vault capacity 250. Remaining sealed slots are held for tic-tac-toe, rock paper scissors,
-          and the rest of the bundle.
+          All 50 games are now live in the vault. Enter to explore them all!
         </p>
       </section>
     </div>
