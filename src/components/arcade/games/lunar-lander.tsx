@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { GameShell } from "@/components/arcade/game-shell";
 import { useGameLoop, usePersist, useKeys } from "@/components/arcade/hooks";
+import { paintArena } from "@/components/arcade/canvas-paint";
 import { getGame } from "@/lib/arcade-games";
 
 const G = getGame("lunar-lander")!;
@@ -85,8 +86,7 @@ export default function LunarLander() {
 
     const c = canvas.current?.getContext("2d");
     if (!c) return;
-    c.fillStyle = "#071018";
-    c.fillRect(0, 0, W, H);
+    paintArena(c, W, H, G.accent, { top: "#0c0a2e", bottom: "#312e81" });
     // Terrain
     c.fillStyle = "#1a2a38";
     c.beginPath();

@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { GameShell } from "@/components/arcade/game-shell";
 import { useGameLoop, usePersist, useKeys } from "@/components/arcade/hooks";
+import { paintArena } from "@/components/arcade/canvas-paint";
 import { getGame } from "@/lib/arcade-games";
 
 const G = getGame("asteroids-vector")!;
@@ -99,8 +100,7 @@ export default function AsteroidsVector() {
 
     const c = canvas.current?.getContext("2d");
     if (!c) return;
-    c.fillStyle = "#071018";
-    c.fillRect(0, 0, W, H);
+    paintArena(c, W, H, G.accent);
     // Wells
     st.wells.forEach((w) => {
       const grad = c.createRadialGradient(w.x, w.y, 0, w.x, w.y, w.r);

@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { GameShell } from "@/components/arcade/game-shell";
 import { useKeys } from "@/components/arcade/hooks";
+import { paintArena } from "@/components/arcade/canvas-paint";
 import { getGame } from "@/lib/arcade-games";
 
 const G = getGame("echo-shadow")!;
@@ -96,8 +97,7 @@ export default function EchoShadow() {
       // Render
       const c = canvas.current?.getContext("2d");
       if (!c) return;
-      c.fillStyle = "#071018";
-      c.fillRect(0, 0, W, H);
+      paintArena(c, W, H, G.accent);
       // Platforms
       c.fillStyle = "#243240";
       lvl.platforms.forEach((p) => c.fillRect(p.x, p.y, p.w, 6));

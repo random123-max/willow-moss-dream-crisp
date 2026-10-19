@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { GameShell } from "@/components/arcade/game-shell";
 import { useGameLoop, usePersist } from "@/components/arcade/hooks";
+import { paintArena } from "@/components/arcade/canvas-paint";
 import { getGame } from "@/lib/arcade-games";
 
 const G = getGame("elemental-breakout")!;
@@ -86,8 +87,7 @@ export default function ElementalBreakout() {
 
     const c = canvas.current?.getContext("2d");
     if (!c) return;
-    c.fillStyle = "#071018";
-    c.fillRect(0, 0, W, H);
+    paintArena(c, W, H, G.accent);
     // Bricks
     const colors: Record<Brick["type"], string> = { normal: "#3ee0d0", ice: "#60a5fa", fire: "#ff6a3d", iron: "#94a3b8" };
     st.bricks.forEach((b) => {

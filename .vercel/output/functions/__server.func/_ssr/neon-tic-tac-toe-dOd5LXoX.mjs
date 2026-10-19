@@ -1,0 +1,232 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { R as require_react, y as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { t as GameShell } from "./game-shell-BUMQ8toB.mjs";
+import { a as getGame } from "./router-DCD8IUw5.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/neon-tic-tac-toe-dOd5LXoX.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+var G = getGame("neon-tic-tac-toe");
+function isCell(c) {
+	return c !== null && typeof c === "object";
+}
+function minimax(board, ai, human, isAi) {
+	const w = winner(board);
+	if (w === ai) return 10 - board.filter((c) => c).length;
+	if (w === human) return -10 + board.filter((c) => c).length;
+	if (board.every((c) => c)) return 0;
+	const scores = board.map((c, i) => {
+		if (c) return isAi ? -Infinity : Infinity;
+		const nb = [...board];
+		nb[i] = isAi ? ai : human;
+		return minimax(nb, ai, human, !isAi);
+	});
+	return isAi ? Math.max(...scores) : Math.min(...scores);
+}
+function bestMove(board, ai, human) {
+	let best = -Infinity, move = -1;
+	for (let i = 0; i < 9; i++) {
+		if (board[i]) continue;
+		const nb = [...board];
+		nb[i] = ai;
+		const s = minimax(nb, ai, human, false);
+		if (s > best) {
+			best = s;
+			move = i;
+		}
+	}
+	return move;
+}
+function winner(b) {
+	for (const [a, c, d] of [
+		[
+			0,
+			1,
+			2
+		],
+		[
+			3,
+			4,
+			5
+		],
+		[
+			6,
+			7,
+			8
+		],
+		[
+			0,
+			3,
+			6
+		],
+		[
+			1,
+			4,
+			7
+		],
+		[
+			2,
+			5,
+			8
+		],
+		[
+			0,
+			4,
+			8
+		],
+		[
+			2,
+			4,
+			6
+		]
+	]) if (b[a] && b[a] === b[c] && b[a] === b[d]) return b[a];
+	return null;
+}
+var X_COLOR = "#f472b6";
+var O_COLOR = "#22d3ee";
+function NeonTicTacToe() {
+	const [board, setBoard] = (0, import_react.useState)(Array(9).fill(null));
+	const [turn, setTurn] = (0, import_react.useState)(0);
+	const [msg, setMsg] = (0, import_react.useState)("Your move — place X");
+	const [over, setOver] = (0, import_react.useState)(false);
+	const radiationPending = (0, import_react.useRef)(false);
+	const flatBoard = board.map((c) => isCell(c) ? c.marker : c);
+	const w = winner(flatBoard);
+	(0, import_react.useEffect)(() => {
+		if (over) return;
+		if (w) {
+			setOver(true);
+			setMsg(w === "X" ? "You won?! Impossible!" : "AI wins. As expected.");
+			return;
+		}
+		if (flatBoard.every((c) => c)) {
+			setOver(true);
+			setMsg("Draw! You survived the glitches.");
+		}
+	}, [
+		w,
+		flatBoard,
+		over
+	]);
+	(0, import_react.useEffect)(() => {
+		if (over || w || turn === 0 || turn % 4 !== 0 || radiationPending.current) return;
+		radiationPending.current = true;
+		const id = setTimeout(() => {
+			setBoard((prev) => {
+				const occupied = prev.map((c, i) => ({
+					i,
+					c
+				})).filter(({ c }) => isCell(c));
+				if (occupied.length === 0) return prev;
+				const target = occupied[Math.floor(Math.random() * occupied.length)];
+				const nb = [...prev];
+				const cell = nb[target.i];
+				if (cell.radiation >= 2) {
+					nb[target.i] = null;
+					setMsg(`Glitch wiped tile ${target.i + 1}!`);
+				} else {
+					nb[target.i] = {
+						marker: cell.marker,
+						radiation: cell.radiation + 1
+					};
+					setMsg(`Tile ${target.i + 1} irradiated! ${2 - cell.radiation - 1} rounds left.`);
+				}
+				return nb;
+			});
+			radiationPending.current = false;
+		}, 600);
+		return () => {
+			clearTimeout(id);
+			radiationPending.current = false;
+		};
+	}, [
+		turn,
+		over,
+		w
+	]);
+	const play = (0, import_react.useCallback)((i) => {
+		if (over || flatBoard[i]) return;
+		const nb = [...board];
+		nb[i] = "X";
+		setBoard(nb);
+		setTurn((t) => t + 1);
+		setTimeout(() => {
+			const fb = nb.map((c) => isCell(c) ? c.marker : c);
+			if (winner(fb)) return;
+			const aiIdx = bestMove(fb, "O", "X");
+			if (aiIdx >= 0) {
+				const nb2 = [...nb];
+				nb2[aiIdx] = "O";
+				setBoard(nb2);
+				setTurn((t) => t + 1);
+			}
+		}, 300);
+	}, [
+		board,
+		flatBoard,
+		over
+	]);
+	const reset = () => {
+		setBoard(Array(9).fill(null));
+		setTurn(0);
+		setMsg("Your move — place X");
+		setOver(false);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GameShell, {
+		title: G.title,
+		emoji: G.emoji,
+		accent: G.accent,
+		howTo: G.howTo,
+		twist: G.twist,
+		onReset: reset,
+		score: msg,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex flex-col items-center justify-center gap-5 p-4 pt-8",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "g3d-scene g3d-drop",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "g3d-board grid grid-cols-3 gap-2.5",
+						style: {
+							width: 300,
+							height: 300
+						},
+						children: board.map((c, i) => {
+							const marker = isCell(c) ? c.marker : c;
+							const radLevel = isCell(c) ? c.radiation : 0;
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								type: "button",
+								disabled: !!marker || over,
+								onClick: () => play(i),
+								className: "g3d-tile flex items-center justify-center text-5xl font-bold transition-all duration-200",
+								style: {
+									["--g3d-top"]: radLevel > 0 ? "#7c2d12" : "#312e81",
+									["--g3d-side"]: radLevel > 0 ? "#451a03" : "#1e1b4b",
+									color: marker === "X" ? X_COLOR : O_COLOR,
+									boxShadow: marker ? `0 0 24px ${marker === "X" ? X_COLOR : O_COLOR}66, inset 0 1px 0 rgba(255,255,255,.4)` : "inset 0 1px 0 rgba(255,255,255,.15)",
+									animation: marker ? "g3d-pop .32s cubic-bezier(.22,1,.36,1)" : void 0
+								},
+								children: marker || (radLevel > 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-2xl",
+									children: "☢️"
+								}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs text-muted/40",
+									children: "+"
+								}))
+							}, i);
+						})
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-sm text-muted",
+					children: msg
+				}),
+				board.some((c) => isCell(c) && c.radiation > 0) && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "g3d-chip bg-ember/20 px-3 py-1 text-xs text-ember",
+					children: "⚠️ Glitch radiation active"
+				})
+			]
+		})
+	});
+}
+//#endregion
+export { NeonTicTacToe as default };

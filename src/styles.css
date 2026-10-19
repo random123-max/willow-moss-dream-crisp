@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #071018;
-  --color-surface: #101a24;
-  --color-elevated: #182430;
-  --color-fg: #ece7de;
-  --color-muted: #8d968e;
-  --color-primary: #3ee0d0;
-  --color-ember: #ff6a3d;
-  --color-dust: #c4b8a5;
-  --color-line: #243240;
+  /* Colourful, modern arcade palette — bright & vibrant, not retro neon */
+  --color-bg: #0f0a2e;
+  --color-surface: #1a1247;
+  --color-elevated: #271b5e;
+  --color-fg: #f5f3ff;
+  --color-muted: #b8a9e6;
+  --color-primary: #f472b6;
+  --color-ember: #fbbf24;
+  --color-dust: #e9d5ff;
+  --color-line: #3d2f7a;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -26,7 +27,11 @@
   body,
   #app {
     min-height: 100%;
-    background: var(--color-bg);
+    background:
+      radial-gradient(circle at 20% 0%, rgba(167, 139, 250, 0.18), transparent 55%),
+      radial-gradient(circle at 85% 15%, rgba(244, 114, 182, 0.16), transparent 50%),
+      radial-gradient(circle at 50% 100%, rgba(34, 211, 238, 0.14), transparent 60%),
+      var(--color-bg);
     color: var(--color-fg);
   }
 
@@ -34,6 +39,89 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+/* ────────────────────────────────────────────────────────────
+   Shared 3D / isometric arcade utilities — used across all games
+   ──────────────────────────────────────────────────────────── */
+
+/* A perspective scene that gives its children real depth */
+.g3d-scene {
+  perspective: 900px;
+  perspective-origin: 50% 30%;
+}
+
+/* Tilted isometric board (apply to the board container) */
+.g3d-board {
+  transform: rotateX(22deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* A 3D extruded tile — colourful top face with a depth body */
+.g3d-tile {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  background: var(--g3d-top, #6366f1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.25);
+}
+.g3d-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--g3d-side, #4338ca);
+  transform: translateZ(-10px);
+  filter: brightness(0.7);
+}
+.g3d-tile.is-raised {
+  transform: translateZ(14px) scale(1.04);
+}
+.g3d-tile.is-raised::after {
+  transform: translateZ(-22px);
+}
+
+/* Floating glow chip used for score / power-ups */
+.g3d-chip {
+  border-radius: 999px;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Soft drop shadow that reads as depth under a raised element */
+.g3d-drop {
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45));
+}
+
+/* Vibrant gradient text for headings */
+.g3d-grad-text {
+  background: linear-gradient(120deg, #f472b6, #a78bfa 40%, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Bouncy idle float for decorative pieces */
+@keyframes g3d-float {
+  0%, 100% { transform: translateY(0) rotateZ(0deg); }
+  50% { transform: translateY(-7px) rotateZ(1.5deg); }
+}
+.g3d-float {
+  animation: g3d-float 3.4s ease-in-out infinite;
+}
+
+/* Pop-in used when a tile is placed / scored */
+@keyframes g3d-pop {
+  0% { transform: translateZ(0) scale(0.6); opacity: 0; }
+  60% { transform: translateZ(18px) scale(1.12); opacity: 1; }
+  100% { transform: translateZ(8px) scale(1); }
+}
+.g3d-pop {
+  animation: g3d-pop 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .gift-scene {

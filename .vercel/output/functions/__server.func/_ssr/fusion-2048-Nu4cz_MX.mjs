@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { R as require_react, y as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as GameShell } from "./game-shell-BUMQ8toB.mjs";
-import { a as getGame } from "./router-B7Dqm3Hw.mjs";
+import { a as getGame } from "./router-DCD8IUw5.mjs";
 import { r as usePersist } from "./hooks-eG3p33aB.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/fusion-2048-Nu4cz_MX.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
